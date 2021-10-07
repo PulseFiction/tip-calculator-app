@@ -60,22 +60,51 @@ p {
 
 }
 
+#bill {
+    display: block;
+    font-family: var(--main-font);
+}
+
+.bill_label {
+    display: block; /* Do I need to add this? */
+    font-family: var(--main-font);
+    font-size: 0.8rem;
+}
+
 .percentages {
     display: grid;
     grid-template-columns: 100px 100px 100px;
     column-gap: 10px;
-    row-gap: 10px;
+    row-gap: 15px;
 }
 
 .percentage_button {
     font-family: var(--main-font);
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1rem;
     background-color: var(--clr-neutral-drk-cyan);
     color: var(--clr-neutral-white);
     border-radius: 5px;
     border-style: none;
+    padding: 0.4rem;
 
+}
+
+#custom_button {
+    background-color: var(--clr-neutral-light-cyan-two);
+    color: var(--clr-neutral-gray-cyan-two);
+}
+
+.percentage_button:hover {
+    background-color: var(--clr-primary-cyan);
+    color: var(--clr-neutral-drk-cyan);
+    cursor: pointer;
+
+}
+
+#custom_button:hover {
+    background-color: var(--clr-neutral-drk-cyan);
+    color: var(--clr-neutral-white);
 }
 
 

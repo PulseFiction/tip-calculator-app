@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Space Mono', monospace; 
+    font-weight: 400, 500, 700;
+    src: url(https://fonts.google.com/specimen/Space+Mono);
+
+}
+
+:root {
+    --clr-primary-cyan: hsl(172, 67%, 45%);
+
+    --clr-neutral-drk-cyan: hsl(183, 100%, 15%);
+    --clr-neutral-gray-cyan-one: hsl(186, 14%, 43%);
+    --clr-neutral-gray-cyan-two: hsl(184, 14%, 56%);
+
+    --clr-neutral-light-cyan-one: hsl(185, 41%, 84%);
+    --clr-neutral-light-cyan-two: hsl(189, 41%, 97%);
+
+    --clr-neutral-white: hsl(0, 0%, 100%);
+
+    --main-font: 'Space Mono', monospace;
+
+}
+
+body {
+    background: var(--clr-neutral-light-cyan-one);
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    background: var(--clr-neutral-white);
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 20px;
+    
+    max-width: 40rem;
+    height: 20rem;
+    
+}
+
+.sr-only {
+    position: absolute;
+    top: auto;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+h2 {
+    font-family: var(--main-font);
+    font-size: 1rem;
+}
+
+p {
+    font-family: var(--main-font);
+
+}
+
+.percentages {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.percentage_button {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 1.5rem;
+    background-color: var(--clr-neutral-drk-cyan);
+    color: var(--clr-neutral-white);
+    border-radius: 5px;
+    border-style: none;
+
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

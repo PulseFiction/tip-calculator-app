@@ -11,7 +11,8 @@
     --clr-neutral-drk-cyan: hsl(183, 100%, 15%);
     --clr-neutral-gray-cyan-one: hsl(186, 14%, 43%);
     --clr-neutral-gray-cyan-two: hsl(184, 14%, 56%);
-
+    --clr-neutral-green: hsl(183, 79%, 24%);
+    --clr-neutral-grey: hsl(202, 50%, 97%);
     --clr-neutral-light-cyan-one: hsl(185, 41%, 84%);
     --clr-neutral-light-cyan-two: hsl(189, 41%, 97%);
 
@@ -25,6 +26,8 @@ body {
     background: var(--clr-neutral-light-cyan-one);
 }
 
+/* Containers */
+
 #main {
     display: flex;
     justify-content: center;
@@ -35,10 +38,27 @@ body {
     margin: 0 auto;
     border-radius: 20px;
     
-    max-width: 40rem;
+    max-width: 50rem;
     height: 20rem;
     
 }
+
+.right_area {
+    background-color: var(--clr-neutral-drk-cyan);
+    width: 20rem;
+    height: 18rem;
+    border-radius: 10px;
+    position: relative;
+    
+
+}
+
+.results {
+    position: absolute;
+    
+}
+
+/* Headings and paragraphs */
 
 .sr-only {
     position: absolute;
@@ -60,15 +80,51 @@ p {
 
 }
 
+.amount_per_person {
+    border: 1px solid black;
+    position: absolute;
+    left: 14rem;
+    top: 0;
+    font-size: 2rem;
+
+}
+
+/* Inputs and Labels*/
+
 #bill {
     display: block;
     font-family: var(--main-font);
+    -moz-appearance: textfield;
+    width: 20rem;
+    height: 1.8rem;
+    background-color: var(--clr-neutral-grey);
+    border-style: none;
+    border-radius: 5px;
+}
+
+#people {
+    display: block;
+    font-family: var(--main-font);
+    -moz-appearance: textfield;
+    width: 20rem;
+    height: 1.8rem;
+    background-color: var(--clr-neutral-grey);
+    border-style: none;
+    border-radius: 5px;
 }
 
 .bill_label {
-    display: block; /* Do I need to add this? */
+    display: block; /* Do I need to add this if #bill has it? */
     font-family: var(--main-font);
     font-size: 0.8rem;
+}
+
+.people_label {
+    display: block; 
+    font-family: var(--main-font);
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    
 }
 
 .percentages {
@@ -78,10 +134,12 @@ p {
     row-gap: 15px;
 }
 
+/* Buttons */
+
 .percentage_button {
     font-family: var(--main-font);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: var(--clr-neutral-drk-cyan);
     color: var(--clr-neutral-white);
     border-radius: 5px;
@@ -95,6 +153,23 @@ p {
     color: var(--clr-neutral-gray-cyan-two);
 }
 
+.reset_button {
+    position: absolute;
+    top: 15rem;
+    left: 2rem;
+    width: 16rem;
+    height: 2rem;
+    background-color: var(--clr-neutral-green);
+    color: var(--clr-neutral-drk-cyan);
+    font-weight: 400;
+    font-size: 1rem;
+    border-style: none;
+    border-radius: 5px;
+
+}
+
+/* Hovers */
+
 .percentage_button:hover {
     background-color: var(--clr-primary-cyan);
     color: var(--clr-neutral-drk-cyan);
@@ -107,7 +182,13 @@ p {
     color: var(--clr-neutral-white);
 }
 
+.reset_button:hover {
+    background-color: var(--clr-primary-cyan);
 
+}
+
+
+/* Credits */ 
 .attribution { 
     font-size: 11px; 
     text-align: center; 
